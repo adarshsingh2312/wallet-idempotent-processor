@@ -23,6 +23,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(WalletNotFoundException.class)
     public ResponseEntity<?> handleWalletNotFound(WalletNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(Map.of("error", "Wallet Not Found", "walletId",ex.getWalletId()));
+                .body(Map.of("error", "Wallet Not Found", "userId",ex.getUserId()));
     }
 }
